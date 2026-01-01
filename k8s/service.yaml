@@ -1,0 +1,33 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: selenium-hub
+  namespace: selenium-automation
+spec:
+  type: ClusterIP
+  selector:
+    app: selenium-hub
+  ports:
+    - name: publish
+      port: 4442
+      targetPort: 4442
+    - name: subscribe
+      port: 4443
+      targetPort: 4443
+    - name: hub
+      port: 4444
+      targetPort: 4444
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: selenium-hub-external
+  namespace: selenium-automation
+spec:
+  type: LoadBalancer
+  selector:
+    app: selenium-hub
+  ports:
+    - name: hub
+      port: 4444
+      targetPort: 4444

@@ -1,17 +1,66 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# env files
+.env*
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+
+
+# Java
+*.class
+*.jar
+*.war
+*.ear
+*.logs
+*.log
+
+# Maven
 target/
 pom.xml.tag
 pom.xml.releaseBackup
 pom.xml.versionsBackup
 pom.xml.next
 release.properties
-dependency-reduced-pom.xml
-buildNumber.properties
-.mvn/timing.properties
-# https://maven.apache.org/wrapper/#usage-without-binary-jar
-.mvn/wrapper/maven-wrapper.jar
 
-# Eclipse m2e generated files
-# Eclipse Core
+# IDE
+.idea/
+*.iml
+*.ipr
+*.iws
 .project
-# JDT-specific (Eclipse Java Development Tools)
 .classpath
+.settings/
+.vscode/
+*.swp
+*.swo
+
+# Test outputs
+allure-results/
+allure-report/
+test-output/
+screenshots/
+
+# OS
+.DS_Store
+Thumbs.db

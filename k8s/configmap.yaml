@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: test-config
+  namespace: selenium-automation
+data:
+  ENV: "staging"
+  BROWSER: "chrome"
+  HEADLESS: "true"
+  REMOTE_EXECUTION: "true"
+  REMOTE_URL: "http://selenium-hub:4444/wd/hub"
+  IMPLICIT_WAIT: "10"
+  EXPLICIT_WAIT: "20"
+  PAGE_LOAD_TIMEOUT: "30"
+  PARALLEL_THREADS: "4"

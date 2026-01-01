@@ -1,0 +1,37 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: selenium-test-job
+  namespace: selenium-automation
+spec:
+  ttlSecondsAfterFinished: 600
+  backoffLimit: 2
+  template:
+    spec:
+      containers:
+        - name: test-runner
+          image: your-registry/selenium-automation:latest
+          imagePullPolicy: Always
+          envFrom:
+            - configMapRef:
+                name: test-config
+            - secretRef:
+                name: test-secrets
+          env:
+            - name: SUITE_FILE
+              value: "testng-suites/regression-testng.xml"
+          resources:
+            requests:
+              memory: "1Gi"
+              cpu: "500m"
+            limits:
+              memory: "2Gi"
+              cpu: "1000m"
+          volumeMounts:
+            - name: test-results
+              mountPath: /app/target
+          command: ["mvn", "test", "-DsuiteXmlFile=$(SUITE_FILE)"]
+      restartPolicy: Never
+      volumes:
+        - name: test-results
+          emptyDir: {}

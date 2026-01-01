@@ -1,0 +1,37 @@
+{
+  "users": [
+    {
+      "username": "user1",
+      "password": "pass123",
+      "email": "user1@example.com",
+      "role": "admin"
+    },
+    {
+      "username": "user2",
+      "password": "pass456",
+      "email": "user2@example.com",
+      "role": "user"
+    },
+    {
+      "username": "user3",
+      "password": "pass789",
+      "email": "user3@example.com",
+      "role": "guest"
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "name": "Product A",
+      "price": 99.99,
+      "category": "Electronics"
+    },
+    {
+      "id": 2,
+      "name": "Product B",
+      "price": 49.99,
+      "category": "Books"
+    }
+  ],
+  "searchTerms": ["selenium", "automation", "testing", "framework"]
+}
