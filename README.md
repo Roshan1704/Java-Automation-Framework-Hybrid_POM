@@ -21,7 +21,7 @@ A production-ready, enterprise-grade Java Selenium automation framework followin
 - Docker (for containerized execution)
 - kubectl (for Kubernetes deployment)
 
-# Java Selenium Automation Framework - Project Structure
+## 🔧 Project Structure
 
 ```
 selenium-automation-framework/
