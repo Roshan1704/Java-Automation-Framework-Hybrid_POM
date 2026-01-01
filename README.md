@@ -117,16 +117,7 @@ selenium-automation-framework/
 └── .gitignore
 
 
-## 🛠️ Installation
 
-```bash
-# Clone the repository
-git clone https://github.com/your-org/selenium-automation-framework.git
-cd selenium-automation-framework
-
-# Install dependencies
-mvn clean install -DskipTests
-```
 
 ## 🏃 Running Tests
 
